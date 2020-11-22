@@ -9,8 +9,8 @@ import {
 const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
   // State
   const [songInfo, setSongInfo] = useState({
-    currentTime: null,
-    duration: null,
+    currentTime: 0,
+    duration: 0,
   });
   // Refs
   const audioRef = useRef(null);
@@ -32,6 +32,11 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
     setSongInfo({ ...songInfo, currentTime: current, duration });
   };
 
+  const dragHandler = (e) => {
+    audioRef.current.currentTime = e.target.value;
+    setSongInfo({ ...songInfo, currentTime: e.target.value });
+  };
+
   const getTime = (time) => {
     return (
       Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
@@ -42,7 +47,13 @@ const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
     <div className="player-container">
       <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
-        <input type="range" />
+        <input
+          min={0}
+          max={songInfo.duration}
+          value={songInfo.currentTime}
+          onChange={dragHandler}
+          type="range"
+        />
         <p>{getTime(songInfo.duration)}</p>
       </div>
       <div className="play-control">
