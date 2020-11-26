@@ -18,10 +18,11 @@
 
 .library-song {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   // flex-direction: column;
   padding: 1rem 2rem;
   cursor: pointer;
+  transition: background 0.5s ease;
   &:hover {
     background: #cfdbf3;
   }
@@ -71,4 +72,10 @@
 .active-library {
   transform: translateX(0%);
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
 }

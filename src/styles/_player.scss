@@ -3,16 +3,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   .time-control {
     width: 50%;
     // background: lightcoral;
     display: flex;
+    align-items: center;
 
-    input {
+    .track {
+      background: lightblue;
       width: 100%;
-      padding: 1rem 0rem;
+      height: 1rem;
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      input {
+        width: 100%;
+        // padding: 1rem 0rem;
+        -webkit-appearance: none;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .animate-track {
+        background: rgb(204, 204, 204);
+        width: 100%;
+        height: 100%;
+        transform: translateX(0%);
+        pointer-events: none;
+      }
     }
 
     p {
@@ -30,5 +54,25 @@
     svg {
       cursor: pointer;
     }
+  }
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90% !important;
+  }
+
+  .play-control {
+    width: 60% !important;
   }
 }
