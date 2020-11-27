@@ -2,7 +2,43 @@ nav {
   min-height: 10vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+
+  .nav-icon {
+    // border: 2px solid red;
+    position: relative;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: 1rem;
+    background: #00000029;
+
+    .fa-bolt {
+      font-size: 4rem;
+      // position: absolute;
+      // top: -18px;
+      // left: -30px;
+      z-index: -1;
+      color: rgb(251, 255, 0);
+      z-index: 999;
+    }
+
+    h1 {
+      position: absolute;
+      z-index: 1000;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      border-bottom: 1px solid black;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  .nav-buttons {
+    z-index: 999;
+  }
 
   button {
     background: transparent;
@@ -10,13 +46,18 @@ nav {
     cursor: pointer;
     padding: 0.5rem;
     transition: all 0.3s ease;
+    margin: 0 0.5rem;
 
-    &:hover {
-      background: rgb(65, 65, 65);
-      color: white;
-    }
+    // &:hover {
+    //   background: rgb(65, 65, 65);
+    //   color: white;
+    // }
 
-    .fa-music {
+    .fa-music,
+    .fa-moon,
+    .fa-sun,
+    .fa-eye,
+    .fa-eye-slash {
       margin-left: 0.5rem;
     }
   }

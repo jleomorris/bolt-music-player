@@ -16,13 +16,15 @@ h3 {
 
 .App {
   transition: all 0.5s ease;
+  height: 100vh;
 }
 
 .library-active {
-  margin-left: 20%;
+  padding-left: 20%;
 }
 
 @import "./player";
 @import "./song";
 @import "./library";
 @import "./nav";
+@import "./darkMode";
