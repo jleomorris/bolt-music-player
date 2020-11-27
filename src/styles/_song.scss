@@ -9,7 +9,6 @@
   img {
     width: 30%;
     border-radius: 50%;
-    padding-top: 3rem;
   }
 
   h2 {
@@ -21,10 +20,27 @@
   }
 }
 
+// Responsive
+
 @media screen and (max-width: 768px) {
   .song-container {
     img {
       width: 60%;
     }
+  }
+}
+
+// Animation
+
+.rotate {
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
