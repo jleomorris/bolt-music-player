@@ -8,10 +8,15 @@ const Library = ({
   isPlaying,
   setSongs,
   isLibraryActive,
+  isDarkModeActive,
 }) => {
   return (
-    <div className={`library ${isLibraryActive ? "active-library" : ""}`}>
-      <h2>Library</h2>
+    <div
+      className={`library ${isLibraryActive ? "active-library" : ""} ${
+        isDarkModeActive ? "dark" : ""
+      }`}
+    >
+      <h2 className={`${isDarkModeActive ? "dark-icon-font" : ""}`}>Library</h2>
       <div className="library-songs">
         {songs.map((song) => (
           <LibrarySong

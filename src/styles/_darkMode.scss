@@ -1,0 +1,31 @@
+.dark {
+  background-color: #333333;
+  color: white !important;
+}
+
+.dark-icon-font {
+  transition: all 0.5s ease;
+  color: white;
+}
+
+.dark-hover {
+  color: white;
+  border: 2px solid white;
+  outline: none;
+  &:hover {
+    background: white;
+    color: rgb(65, 65, 65);
+  }
+}
+
+.light-hover {
+  outline: none;
+  &:hover {
+    background: rgb(65, 65, 65);
+    color: white;
+  }
+}
+
+.nav-icon-dark {
+  background: #ffffff9c !important;
+}

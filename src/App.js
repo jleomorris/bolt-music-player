@@ -20,9 +20,11 @@ function App() {
     animationPercentage: 0,
   });
   const [isLibraryActive, setIsLibraryActive] = useState(false);
+  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
   // Refs
   const audioRef = useRef(null);
 
+  // Handlers
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
     const duration = e.target.duration;
@@ -45,12 +47,22 @@ function App() {
   };
 
   return (
-    <div className={`App ${isLibraryActive ? "library-active" : ""}`}>
+    <div
+      className={`App ${isLibraryActive ? "library-active" : ""} ${
+        isDarkModeActive ? "dark" : ""
+      }`}
+    >
       <Nav
         isLibraryActive={isLibraryActive}
         setIsLibraryActive={setIsLibraryActive}
+        isDarkModeActive={isDarkModeActive}
+        setIsDarkModeActive={setIsDarkModeActive}
       />
-      <Song currentSong={currentSong} isPlaying={isPlaying} />
+      <Song
+        currentSong={currentSong}
+        isPlaying={isPlaying}
+        isDarkModeActive={isDarkModeActive}
+      />
       <Player
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
@@ -69,6 +81,7 @@ function App() {
         setCurrentSong={setCurrentSong}
         setSongs={setSongs}
         isLibraryActive={isLibraryActive}
+        isDarkModeActive={isDarkModeActive}
       />
       <audio
         onTimeUpdate={timeUpdateHandler}
