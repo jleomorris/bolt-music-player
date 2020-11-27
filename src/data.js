@@ -69,7 +69,7 @@ function chillHop() {
       artist: "Nymano, j'san",
       id: uuidv4(),
       active: false,
-      color: ["#554f80", "#554f80"],
+      color: ["#554f80", "#E0938E"],
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10136",
     },
     {
