@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 // Styles
 import "./styles/app.scss";
 // Components
@@ -23,6 +23,11 @@ function App() {
   const [isDarkModeActive, setIsDarkModeActive] = useState(false);
   // Refs
   const audioRef = useRef(null);
+
+  //UseEffect
+  useEffect(() => {
+    setIsLibraryActive(true);
+  }, []);
 
   // Handlers
   const timeUpdateHandler = (e) => {

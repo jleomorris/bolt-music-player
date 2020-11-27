@@ -22,7 +22,7 @@
   // flex-direction: column;
   padding: 1rem 2rem;
   cursor: pointer;
-  transition: background 0.5s ease;
+  transition: background 1s ease;
   &:hover {
     background: #cfdbf3;
   }
@@ -70,6 +70,7 @@
 }
 
 .active-library {
+  transition: all 1s ease;
   transform: translateX(0%);
   opacity: 1;
 }
