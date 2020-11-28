@@ -6,10 +6,26 @@ const Library = ({
   setCurrentSong,
   audioRef,
   isPlaying,
+  setIsPlaying,
   setSongs,
   isLibraryActive,
   isDarkModeActive,
 }) => {
+  // Handlers
+  const sortByArtistHandler = () => {
+    const songCopy = songs.map((song) => song);
+    const sortedyArtist = songCopy.sort((a, b) =>
+      a.artist > b.artist ? 1 : -1
+    );
+    setSongs(sortedyArtist);
+  };
+
+  const sortByTitleHandler = () => {
+    const songCopy = songs.map((song) => song);
+    const sortedByTitle = songCopy.sort((a, b) => (a.name > b.name ? 1 : -1));
+    setSongs(sortedByTitle);
+  };
+
   return (
     <div
       className={`library ${isLibraryActive ? "active-library" : ""} ${
@@ -17,6 +33,14 @@ const Library = ({
       }`}
     >
       <h2 className={`${isDarkModeActive ? "dark-icon-font" : ""}`}>Library</h2>
+      <div className="sort-by-container">
+        <h3 className="sort-by">Sort by</h3>
+        <hr />
+      </div>
+      <div className="sort-by-button-container">
+        <button onClick={sortByArtistHandler}>Artist</button>
+        <button onClick={sortByTitleHandler}>Title</button>
+      </div>
       <div className="library-songs">
         {songs.map((song) => (
           <LibrarySong
@@ -27,7 +51,9 @@ const Library = ({
             key={song.id}
             audioRef={audioRef}
             isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
             setSongs={setSongs}
+            isDarkModeActive={isDarkModeActive}
           />
         ))}
       </div>
