@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bolt-music-player/static/css/main.70591479.chunk.css",
+    "main.css": "/bolt-music-player/static/css/main.9006cd77.chunk.css",
     "main.js": "/bolt-music-player/static/js/main.fc371ed3.chunk.js",
     "main.js.map": "/bolt-music-player/static/js/main.fc371ed3.chunk.js.map",
     "runtime-main.js": "/bolt-music-player/static/js/runtime-main.797ef6fa.js",
@@ -10,13 +10,13 @@
     "static/js/3.9585931a.chunk.js": "/bolt-music-player/static/js/3.9585931a.chunk.js",
     "static/js/3.9585931a.chunk.js.map": "/bolt-music-player/static/js/3.9585931a.chunk.js.map",
     "index.html": "/bolt-music-player/index.html",
-    "static/css/main.70591479.chunk.css.map": "/bolt-music-player/static/css/main.70591479.chunk.css.map",
+    "static/css/main.9006cd77.chunk.css.map": "/bolt-music-player/static/css/main.9006cd77.chunk.css.map",
     "static/js/2.5a595488.chunk.js.LICENSE.txt": "/bolt-music-player/static/js/2.5a595488.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.797ef6fa.js",
     "static/js/2.5a595488.chunk.js",
-    "static/css/main.70591479.chunk.css",
+    "static/css/main.9006cd77.chunk.css",
     "static/js/main.fc371ed3.chunk.js"
   ]
 }
