@@ -121,8 +121,26 @@
 @media screen and (max-width: 768px) {
   .library {
     width: 100%;
+
+    .sort-by-container {
+      margin: 3rem 0 !important;
+    }
   }
-  .nav-icon {
-    display: none !important;
+
+  nav {
+    justify-content: flex-end !important;
+    // padding-top: 0rem !important;
+    padding: 0.5rem !important;
+    .nav-icon {
+      display: none !important;
+    }
+    .nav-buttons {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        margin: 0.25rem;
+      }
+    }
   }
 }
