@@ -14,7 +14,11 @@ const Nav = ({
 }) => {
   return (
     <nav>
-      <div className={`nav-icon ${isDarkModeActive ? "nav-icon-dark" : ""}`}>
+      <div
+        className={`nav-icon ${isDarkModeActive ? "nav-icon-dark" : ""} ${
+          isLibraryActive ? "active-nav-icon" : ""
+        }`}
+      >
         <h1
         // className={`${isDarkModeActive ? "dark-icon-font" : ""}`}
         >

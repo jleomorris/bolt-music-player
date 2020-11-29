@@ -117,6 +117,12 @@
   opacity: 1;
 }
 
+.active-nav-icon {
+  transition: all 1s ease;
+  transform: translateX(40%);
+  opacity: 1;
+}
+
 // Responsiveness
 @media screen and (max-width: 768px) {
   .library {
@@ -128,11 +134,12 @@
   }
 
   nav {
-    justify-content: flex-end !important;
+    justify-content: space-between !important;
     // padding-top: 0rem !important;
     padding: 0.5rem !important;
     .nav-icon {
-      display: none !important;
+      // display: none !important;
+      transform: translateX(5%);
     }
     .nav-buttons {
       display: flex;
