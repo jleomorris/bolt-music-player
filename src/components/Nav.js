@@ -33,14 +33,14 @@ const Nav = ({
         >
           Library
           {/* <FontAwesomeIcon icon={faMusic} /> */}
-          <FontAwesomeIcon icon={isLibraryActive ? faEyeSlash : faEye} />
+          <FontAwesomeIcon icon={isLibraryActive ? faEye : faEyeSlash} />
         </button>
         <button
           className={`${isDarkModeActive ? "dark-hover" : "light-hover"}`}
           onClick={() => setIsDarkModeActive(!isDarkModeActive)}
         >
           Dark mode
-          <FontAwesomeIcon icon={isDarkModeActive ? faSun : faMoon} />
+          <FontAwesomeIcon icon={isDarkModeActive ? faMoon : faSun} />
         </button>
       </div>
     </nav>
