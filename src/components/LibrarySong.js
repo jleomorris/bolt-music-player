@@ -44,9 +44,7 @@ const LibrarySong = ({
 
   return (
     <div
-      className={`library-song 
-      // ${song.active ? "selected" : ""}
-      `}
+      className={`library-song ${song.active ? "grayscale-off" : ""}`}
       onClick={songSelectHandler}
     >
       <div className="song-cover-container">

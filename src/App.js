@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 // Styles
 import "./styles/app.scss";
 // Images
-import backgroundImage from "./img/pexels-photo-3391932.jpeg";
+import backgroundImage from "./img/pexels-photo-3391932.jpg";
 // Components
 import Player from "./components/Player";
 import Song from "./components/Song";
