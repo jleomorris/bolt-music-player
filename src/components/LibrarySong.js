@@ -1,8 +1,13 @@
 import React from "react";
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import { faPause } from "@fortawesome/free-solid-svg-icons";
 
 const LibrarySong = ({
   song,
   songs,
+  currentSong,
   setCurrentSong,
   id,
   audioRef,
@@ -39,10 +44,20 @@ const LibrarySong = ({
 
   return (
     <div
-      className={`library-song ${song.active ? "selected" : ""}`}
+      className={`library-song 
+      // ${song.active ? "selected" : ""}
+      `}
       onClick={songSelectHandler}
     >
-      <img alt={song.name} src={song.cover}></img>
+      <div className="song-cover-container">
+        <img alt={song.name} src={song.cover}></img>
+        {id === currentSong.id && isPlaying && (
+          <FontAwesomeIcon icon={faPlayCircle} />
+        )}
+        {id === currentSong.id && !isPlaying && (
+          <FontAwesomeIcon icon={faPause} />
+        )}
+      </div>
       <div className="song-description">
         <h3 className={`${isDarkModeActive ? "dark-icon-font" : ""}`}>
           {song.name}

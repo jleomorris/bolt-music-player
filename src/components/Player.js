@@ -17,6 +17,7 @@ const Player = ({
   songs,
   setCurrentSong,
   setSongs,
+  isDarkModeActive,
 }) => {
   //Event handlers
   const activeLibraryHandler = (nextPrev) => {
@@ -106,19 +107,19 @@ const Player = ({
       </div>
       <div className="play-control">
         <FontAwesomeIcon
-          className="skip-back"
+          className={`skip-back ${!isDarkModeActive ? "icon-dark" : ""}`}
           size="2x"
           icon={faAngleLeft}
           onClick={() => skipTrackHandler("back")}
         />
         <FontAwesomeIcon
-          className="play"
+          className={`play ${!isDarkModeActive ? "icon-dark" : ""}`}
           size="2x"
           icon={isPlaying ? faPause : faPlay}
           onClick={playSongHandler}
         />
         <FontAwesomeIcon
-          className="skip-forward"
+          className={`skip-forward ${!isDarkModeActive ? "icon-dark" : ""}`}
           size="2x"
           icon={faAngleRight}
           onClick={() => skipTrackHandler("forward")}

@@ -8,15 +8,31 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-h1,
+h1 {
+  color: rgb(54, 54, 54);
+}
+
 h2,
 h3 {
-  color: rgb(54, 54, 54);
+  color: #010101;
 }
 
 .App {
   transition: all 0.5s ease;
   height: 100vh;
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  width: 1920px;
+  filter: brightness(0.8);
+  transition: all 1s ease;
 }
 
 .library-active {

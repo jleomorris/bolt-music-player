@@ -3,6 +3,7 @@ import LibrarySong from "./LibrarySong";
 
 const Library = ({
   songs,
+  currentSong,
   setCurrentSong,
   audioRef,
   isPlaying,
@@ -54,6 +55,7 @@ const Library = ({
             setIsPlaying={setIsPlaying}
             setSongs={setSongs}
             isDarkModeActive={isDarkModeActive}
+            currentSong={currentSong}
           />
         ))}
       </div>

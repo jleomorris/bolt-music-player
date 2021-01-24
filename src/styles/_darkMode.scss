@@ -1,5 +1,5 @@
 .dark {
-  background-color: #333333;
+  background-color: #010101;
   color: white !important;
 }
 
@@ -8,7 +8,7 @@
   color: white !important;
 }
 
-.dark-hover {
+.dark-button {
   color: white;
   border: 2px solid white;
   outline: none;
@@ -18,7 +18,9 @@
   }
 }
 
-.light-hover {
+.light-button {
+  color: black;
+  border: 2px solid black;
   outline: none;
   &:hover {
     background: rgb(65, 65, 65);
@@ -28,4 +30,12 @@
 
 .nav-icon-dark {
   background: #ffffff9c !important;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.icon-dark {
+  color: #010101 !important;
 }

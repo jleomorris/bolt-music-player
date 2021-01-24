@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 // Styles
 import "./styles/app.scss";
+// Images
+import backgroundImage from "./img/pexels-photo-3391932.jpeg";
 // Components
 import Player from "./components/Player";
 import Song from "./components/Song";
@@ -20,7 +22,7 @@ function App() {
     animationPercentage: 0,
   });
   const [isLibraryActive, setIsLibraryActive] = useState(false);
-  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
+  const [isDarkModeActive, setIsDarkModeActive] = useState(true);
   // Refs
   const audioRef = useRef(null);
 
@@ -51,11 +53,12 @@ function App() {
   };
 
   return (
-    <div
-      className={`App ${isLibraryActive ? "library-active" : ""} ${
-        isDarkModeActive ? "dark" : ""
-      }`}
-    >
+    <div className={`App ${isLibraryActive ? "library-active" : ""} `}>
+      <img
+        src={backgroundImage}
+        alt="background"
+        className={`background-image ${!isDarkModeActive ? "invert" : ""}`}
+      />
       <Nav
         isLibraryActive={isLibraryActive}
         setIsLibraryActive={setIsLibraryActive}
@@ -69,6 +72,7 @@ function App() {
       />
       <Player
         isPlaying={isPlaying}
+        isDarkModeActive={isDarkModeActive}
         setIsPlaying={setIsPlaying}
         currentSong={currentSong}
         audioRef={audioRef}
@@ -83,6 +87,7 @@ function App() {
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         songs={songs}
+        currentSong={currentSong}
         setCurrentSong={setCurrentSong}
         setSongs={setSongs}
         isLibraryActive={isLibraryActive}
