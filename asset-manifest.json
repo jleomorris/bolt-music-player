@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/bolt-music-player/static/css/main.dfd46815.chunk.css",
-    "main.js": "/bolt-music-player/static/js/main.1b0362dc.chunk.js",
-    "main.js.map": "/bolt-music-player/static/js/main.1b0362dc.chunk.js.map",
+    "main.css": "/bolt-music-player/static/css/main.42e9d8a2.chunk.css",
+    "main.js": "/bolt-music-player/static/js/main.72729f6b.chunk.js",
+    "main.js.map": "/bolt-music-player/static/js/main.72729f6b.chunk.js.map",
     "runtime-main.js": "/bolt-music-player/static/js/runtime-main.02f42fb1.js",
     "runtime-main.js.map": "/bolt-music-player/static/js/runtime-main.02f42fb1.js.map",
     "static/js/2.4d69194b.chunk.js": "/bolt-music-player/static/js/2.4d69194b.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.fda173ee.chunk.js": "/bolt-music-player/static/js/3.fda173ee.chunk.js",
     "static/js/3.fda173ee.chunk.js.map": "/bolt-music-player/static/js/3.fda173ee.chunk.js.map",
     "index.html": "/bolt-music-player/index.html",
-    "static/css/main.dfd46815.chunk.css.map": "/bolt-music-player/static/css/main.dfd46815.chunk.css.map",
+    "static/css/main.42e9d8a2.chunk.css.map": "/bolt-music-player/static/css/main.42e9d8a2.chunk.css.map",
     "static/js/2.4d69194b.chunk.js.LICENSE.txt": "/bolt-music-player/static/js/2.4d69194b.chunk.js.LICENSE.txt",
-    "static/media/pexels-photo-3391932.c7359ade.jpeg": "/bolt-music-player/static/media/pexels-photo-3391932.c7359ade.jpeg"
+    "static/media/pexels-photo-3391932.fb2d21db.jpg": "/bolt-music-player/static/media/pexels-photo-3391932.fb2d21db.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.02f42fb1.js",
     "static/js/2.4d69194b.chunk.js",
-    "static/css/main.dfd46815.chunk.css",
-    "static/js/main.1b0362dc.chunk.js"
+    "static/css/main.42e9d8a2.chunk.css",
+    "static/js/main.72729f6b.chunk.js"
   ]
 }
