@@ -35,11 +35,20 @@ const LibrarySong = ({
     });
 
     setSongs(newSongs);
-    if (isPlaying) audioRef.current.play();
-    if (!isPlaying) {
-      setIsPlaying(!isPlaying);
+    if (id === currentSong.id && isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else if (id === currentSong.id && !isPlaying) {
       audioRef.current.play();
+      setIsPlaying(true);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
     }
+    // else if (id !== currentSong.id && !isPlaying) {
+    //   audioRef.current.play();
+    //   setIsPlaying(true);
+    // }
   };
 
   return (
@@ -50,10 +59,10 @@ const LibrarySong = ({
       <div className="song-cover-container">
         <img alt={song.name} src={song.cover}></img>
         {id === currentSong.id && isPlaying && (
-          <FontAwesomeIcon icon={faPlayCircle} />
+          <FontAwesomeIcon icon={faPause} />
         )}
         {id === currentSong.id && !isPlaying && (
-          <FontAwesomeIcon icon={faPause} />
+          <FontAwesomeIcon icon={faPlayCircle} />
         )}
       </div>
       <div className="song-description">
